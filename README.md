@@ -27,9 +27,17 @@ The main requirements for the device are:
 1. **Component Selection**:
    - **GPS Module**: This component is responsible for obtaining positional data. Modern GPS modules can be very compact and offer high precision.
    - **NB-IoT Module**: Choose a module that best fits the coverage and power requirements of your application.
+   (Note: GPS + GNSS module below includs both NB-IoT and GPS)
    - **Microcontroller Unit (MCU)**: This acts as the brain of the device, responsible for processing data from the GPS module, handling communication with the NB-IoT module, and processing signals from the accelerometer.
    - **Accelerometer**: This component adds motion detection, which can be used to control when the device should enter low-power mode or activate GPS tracking.
    - **Battery**: Choose a battery that can provide sufficient power for the expected lifetime of the device, often aiming to operate for months or even years on a single charge.
+
+| Image                                                                                                               | Name                                      | Price   | Description                                                                                                                                            | Link                                                                                                                                                      |
+|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![ADXL345 accelerometer](https://www.electrokit.com/cache/76/999x999-product_41016_41016234_41016234.jpg)           | ADXL345 Accelerometer                     | 59 SEK  | The ADXL345 is a small, low-power accelerometer with 13-bit resolution that senses movement in three directions. The sensor measures up to ±16g and detects motions as small as 0.04g.          | [Link](https://www.electrokit.com/adxl345-accelerometer-3-axel-monterad-pa-kort?gad_source=1)                                                            |
+| ![ESP32-PICO-MINI-02U Adafruit Feather V2](https://www.electrokit.com/cache/e8/700x700-product_41019_41019238_41019238.jpg) | ESP32-PICO-MINI-02U Adafruit Feather V2 med w.FL | 329 SEK | MCU                                                                                                                                                    | [Link](https://www.electrokit.com/adafruit-esp32-feather-v2)                                                                                              |
+| ![SIM7080G CAT-M / NB-IoT och GNSS](https://media.distrelec.com/Web/WebShopImages/landscape_large/7-/01/M5Stack-U137-30344657-01.jpg) | SIM7080G CAT-M / NB-IoT och GNSS          | 526 SEK | ...                                                                                                                                                   | [Link](https://www.elfa.se/sv/sim7080g-cat-nb-iot-och-gnss-tradloes-kommunikationsenhet-m5stack-u137/p/30344657?ext_cid=shgooaqsesv-Shopping-PerformanceMax-CSS)  |
+
 
 2. **Miniaturization Techniques**:
    - Use System-in-Package (SiP) or System-on-Chip (SoC) solutions where possible to integrate multiple components on a single chip.
@@ -39,27 +47,6 @@ The main requirements for the device are:
    - Develop a power profile that optimizes when the device is fully active versus in low-power mode. The device should spend the majority of its time in its lowest power state, only activating upon motion signals detected by the accelerometer.
    - Implement efficient power-saving algorithms and components such as low-dropout regulators and efficient battery management systems.
 
-#### Proving and Testing the Solution
-
-1. **Prototype Development**:
-   - Start by assembling a prototype using larger, commercially available development boards such as Arduino or Raspberry Pi, along with modules and sensors.
-   - Focus on implementing the software stack to manage data from the GPS, NB-IoT, and accelerometer.
-
-2. **Functional Testing**:
-   - Perform tests to verify that the device successfully retrieves GPS data and transmits it without errors, and correctly detects and responds to motion using the accelerometer.
-   - Ensure that the device operates effectively in various environments to simulate real-world conditions.
-
-3. **Power Consumption Testing**:
-   - Conduct tests to measure how much power is used, particularly during motion detection and data transmission. Use this data to further refine power management algorithms.
-
-4. **Design Refinement**:
-   - Once the prototype functions as expected, work on refining the design to shrink the components to the smallest possible form. This involves creating custom PCBs and using smaller, surface-mounted components.
-
-5. **Real-World Deployment and Iteration**:
-   - After initial testing, deploy the device in real-world scenarios to gather data and verify its reliability and performance over time.
-   - Use feedback and data from deployment to continuously improve the device, focusing on durability, battery life, and connectivity.
 
 It's important to note that in our IoT lab, we are currently only able to develop prototypes using development boards. This means we do not have the capability to produce miniaturized versions using technologies such as SiP and SoC. 
 Instead, we focus on proving the concept and demonstrating functionality before the client potentially taking the next steps with external partners for miniaturization.
-
-Building such a device involves interdisciplinary skills, combining aspects of electrical and computer engineering. Although challenging, developing a small, efficient, and reliable GPS tracker can have many applications in the tracking and IoT industries.
