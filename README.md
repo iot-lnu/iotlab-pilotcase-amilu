@@ -39,8 +39,13 @@ The main requirements for the device are:
 
 
 
+**First prototype**
 
+<img src="./img/first-prototype.JPG"  width="70%">
 
+**Companion app** 
+
+<img src="./img/app.png" width="70%">
 
 
 
