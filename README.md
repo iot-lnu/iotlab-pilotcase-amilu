@@ -50,7 +50,7 @@ The main requirements for the device are:
 **How it could look like**
 
 Here is a prototype for a 3D-model for a board on how it could look like.
-Dimensions are 50x35mm
+Dimensions are 50x35mm. Fully equipped with battery and the headers the board would be roughly 15mm thick.
 <img width="662" alt="3d-3" src="https://github.com/user-attachments/assets/2f35e73c-f5f1-46b8-b191-c1ac8ae5da10" />
 <img width="672" alt="3d-2" src="https://github.com/user-attachments/assets/f74145cc-c65b-41bf-aef0-bdeced3b97b3" />
 <img width="623" alt="3d-1" src="https://github.com/user-attachments/assets/7eaf789f-3372-4104-9767-1a4973e0250d" />
